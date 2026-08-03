@@ -1,0 +1,138 @@
+/* ============================================
+   CONTACT FORM (MAILBOX) STYLES
+   Dark cyber-aesthetic matching portfolio theme
+   ============================================ */
+
+/* ---------- FORM CONTAINER ---------- */
+.contact-form {
+  margin-top: 2.5rem;
+  padding: 1.8rem;
+  background: rgba(30, 27, 45, 0.4);
+  border: 1px solid var(--line, #332f49);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  max-width: 600px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+  border-color: var(--amber-dim, #5645a0);
+  box-shadow: 0 0 20px var(--glow, rgba(146, 119, 255, 0.15));
+}
+
+/* ---------- FORM GROUPS ---------- */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-dim, #b7b2c8);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- INPUTS & TEXTAREA ---------- */
+.form-input,
+.form-textarea {
+  width: 100%;
+  background: rgba(14, 13, 20, 0.8);
+  border: 1px solid var(--line, #332f49);
+  border-radius: 6px;
+padding: 0.7rem 0.95rem;
+  color: var(--text, #f7f5ff);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(183, 178, 200, 0.45);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--amber, #9277ff);
+  box-shadow: 0 0 12px var(--glow, rgba(146, 119, 255, 0.25));
+}
+
+.form-textarea {
+  min-height: 130px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* ---------- SUBMIT BUTTON ---------- */
+.form-submit {
+  background: linear-gradient(135deg, var(--amber-dim, #5645a0), var(--surface, #1e1b2d));
+  border: 1px solid var(--amber, #9277ff);
+  color: var(--text, #f7f5ff);
+padding: 0.7rem 1.8rem;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.form-submit:hover {
+  background: var(--amber, #9277ff);
+  color: #0e0d14;
+  box-shadow: 0 0 20px var(--amber, #9277ff);
+  transform: translateY(-2px);
+}
+
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ---------- STATUS MESSAGES ---------- */
+.form-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  display: none;
+  line-height: 1.5;
+}
+
+.form-status.success {
+  display: block;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid #22c55e;
+  color: #22c55e;
+}
+
+.form-status.error {
+  display: block;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .form-submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

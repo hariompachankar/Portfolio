@@ -1,0 +1,36 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2211"/>
+      <stop offset="60%" stop-color="#416327"/>
+      <stop offset="100%" stop-color="#9fcd59"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#bg3)"/>
+
+  <!-- turf stripes -->
+  <g opacity="0.35">
+    <rect x="0" y="150" width="400" height="20" fill="#dcefc0"/>
+    <rect x="0" y="190" width="400" height="20" fill="#dcefc0"/>
+  </g>
+
+  <!-- field outline -->
+  <rect x="60" y="60" width="280" height="150" rx="6" fill="none" stroke="#e9f6d6" stroke-width="2" opacity="0.7"/>
+  <line x1="200" y1="60" x2="200" y2="210" stroke="#e9f6d6" stroke-width="2" opacity="0.7"/>
+  <circle cx="200" cy="135" r="26" fill="none" stroke="#e9f6d6" stroke-width="2" opacity="0.7"/>
+  <rect x="60" y="100" width="26" height="70" fill="none" stroke="#e9f6d6" stroke-width="2" opacity="0.7"/>
+  <rect x="314" y="100" width="26" height="70" fill="none" stroke="#e9f6d6" stroke-width="2" opacity="0.7"/>
+
+  <!-- ball -->
+  <circle cx="240" cy="150" r="12" fill="#ffffff"/>
+  <path d="M240 140 l6 4 -2 8 -8 0 -2 -8 z" fill="#1a2211"/>
+
+  <!-- calendar/booking icon -->
+  <g transform="translate(300,45)">
+    <rect x="0" y="0" width="46" height="40" rx="6" fill="#0f180a" stroke="#e9f6d6" stroke-width="2"/>
+    <line x1="0" y1="14" x2="46" y2="14" stroke="#e9f6d6" stroke-width="2"/>
+    <circle cx="14" cy="26" r="3" fill="#e9f6d6"/>
+    <circle cx="23" cy="26" r="3" fill="#e9f6d6"/>
+    <circle cx="32" cy="26" r="3" fill="#9fcd59"/>
+  </g>
+</svg>

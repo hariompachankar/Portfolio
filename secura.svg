@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10202e"/>
+      <stop offset="60%" stop-color="#1e4770"/>
+      <stop offset="100%" stop-color="#53a5e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#bg4)"/>
+
+  <!-- phone -->
+  <g transform="translate(160,35)">
+    <rect x="0" y="0" width="90" height="170" rx="16" fill="#0b1c29" stroke="#bfe0ff" stroke-width="2"/>
+    <rect x="10" y="14" width="70" height="130" rx="4" fill="#12314a"/>
+    <circle cx="45" cy="156" r="5" fill="#bfe0ff" opacity="0.6"/>
+  </g>
+
+  <!-- shield inside screen -->
+  <g transform="translate(212,58)">
+    <path d="M0 0 L28 -10 L28 22 Q28 46 0 58 Q-28 46 -28 22 L-28 -10 Z" transform="translate(28,20)" fill="#0b1c29" stroke="#bfe0ff" stroke-width="2"/>
+    <path d="M17 20 L25 28 L40 12" transform="translate(0,0)" fill="none" stroke="#bfe0ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- pulse rings around phone (alert / emergency) -->
+  <g fill="none" stroke="#bfe0ff" opacity="0.5">
+    <circle cx="205" cy="120" r="70" stroke-width="1.5"/>
+    <circle cx="205" cy="120" r="95" stroke-width="1"/>
+  </g>
+
+  <!-- chat bubble -->
+  <g transform="translate(60,150)">
+    <rect x="0" y="0" width="60" height="40" rx="10" fill="#0b1c29" stroke="#bfe0ff" stroke-width="2"/>
+    <path d="M12 40 L12 52 L26 40 Z" fill="#0b1c29" stroke="#bfe0ff" stroke-width="2"/>
+    <circle cx="16" cy="20" r="3" fill="#bfe0ff"/>
+    <circle cx="30" cy="20" r="3" fill="#bfe0ff"/>
+    <circle cx="44" cy="20" r="3" fill="#bfe0ff"/>
+  </g>
+</svg>
