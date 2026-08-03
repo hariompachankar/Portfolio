@@ -1693,9 +1693,9 @@ Progress over perfection! 📈`,
     // Reposition from fixed bottom/right to top/left for drag
     picker.style.bottom = '';
     picker.style.right = '';
-    picker.style.left = 'calc(100vw - 230px)';
+picker.style.left = 'calc(100vw - 230px)';
     picker.style.top = 'calc(100vh - 80px)';
-    pickveer.style.cursor = 'grab';
+    picker.style.cursor = 'grab';
     picker.style.userSelect = 'none';
     
     function onStart(e) {
@@ -1716,8 +1716,18 @@ Progress over perfection! 📈`,
       const ev = e.touches ? e.touches[0] : e;
       const dx = ev.clientX - startX;
       const dy = ev.clientY - startY;
-      picker.style.left = (origLeft + dx) + 'px';
-      picker.style.top = (origTop + dy) + 'px';
+      let newLeft = origLeft + dx;
+      let newTop = origTop + dy;
+
+      // Clamp within viewport so the picker can never be dragged off-screen
+      const pickerRect = picker.getBoundingClientRect();
+      const maxLeft = window.innerWidth - pickerRect.width - 8;
+      const maxTop = window.innerHeight - pickerRect.height - 8;
+      newLeft = Math.min(Math.max(newLeft, 8), maxLeft);
+      newTop = Math.min(Math.max(newTop, 8), maxTop);
+
+      picker.style.left = newLeft + 'px';
+      picker.style.top = newTop + 'px';
       picker.style.right = 'auto';
       picker.style.bottom = 'auto';
       e.preventDefault();
