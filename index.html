@@ -449,11 +449,11 @@ footer{
       display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; gap:0;
       padding:0.5rem 1.25rem 1rem; background:rgba(14,13,20,0.97); border-bottom:1px solid var(--line);
     }
-    .nav-links.open{ display:flex; }
+.nav-links.open{ display:flex; }
     .nav-links a{ padding:0.65rem 0; }
     .about-grid{ grid-template-columns:1fr; gap:2.5rem; }
     footer{ flex-direction:column; gap:0.6rem; align-items:flex-start; }
-    .nav-cta{ display:none; }
+    .nav-cta{ display:inline-block; }
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -1698,7 +1698,10 @@ picker.style.left = 'calc(100vw - 230px)';
     picker.style.cursor = 'grab';
     picker.style.userSelect = 'none';
     
-    function onStart(e) {
+function onStart(e) {
+      // Don't start dragging when interacting with the accent dots,
+      // so that taps/clicks on them properly trigger setAccent().
+      if (e.target && e.target.classList && e.target.classList.contains('theme-dot')) return;
       const ev = e.touches ? e.touches[0] : e;
       isDragging = true;
       startX = ev.clientX;
