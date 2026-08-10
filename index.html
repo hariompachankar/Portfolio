@@ -144,8 +144,9 @@ html{ scroll-behavior:smooth; font-size:16px; }
 .nav-mark{ font-family:'Fraunces', serif; font-size:1.45rem; letter-spacing:0.01em; }
   .nav-mark span{ color:var(--amber); }
   .nav-links{ display:flex; gap:1.8rem; font-family:'JetBrains Mono', monospace; font-size:0.85rem; color:var(--text-dim); }
-  .nav-links a:hover{ color:var(--text); }
+.nav-links a:hover{ color:var(--text); }
   .nav-links a::before{ content:'~/'; color:var(--amber-dim); }
+  .nav-resume-mobile{ display:none; }
   .menu-toggle{
     display:none; background:transparent; border:1px solid var(--line); border-radius:3px;
     color:var(--text); cursor:pointer; font-family:'JetBrains Mono', monospace; font-size:1rem;
@@ -451,6 +452,7 @@ footer{
     }
 .nav-links.open{ display:flex; }
     .nav-links a{ padding:0.65rem 0; }
+    .nav-resume-mobile{ display:block; color:var(--amber); }
     .about-grid{ grid-template-columns:1fr; gap:2.5rem; }
     footer{ flex-direction:column; gap:0.6rem; align-items:flex-start; }
     .nav-cta{ display:inline-block; }
@@ -792,13 +794,14 @@ footer{
 
 <nav id="nav" aria-label="Primary navigation">
   <a class="nav-mark" href="#top" aria-label="Hariom Pachankar home">hariom<span>.</span>pachankar</a>
-  <div class="nav-links" id="nav-links">
+<div class="nav-links" id="nav-links">
     <a href="#about">about</a>
     <a href="#work">work</a>
     <a href="#terminal">terminal</a>
     <a href="#skills">skills</a>
     <a href="#learning">learning</a>
     <a href="#contact">contact</a>
+    <a href="resume.pdf" class="nav-resume-mobile" download>resume ↓</a>
   </div>
   <button class="sfx-toggle" id="sfx-btn" type="button" title="Toggle Sound Effects">🔊 SFX: ON</button>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">menu</button>
@@ -1182,7 +1185,7 @@ footer{
 
     <div class="social-row reveal">
       <a href="https://github.com/hariompachankar" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="www.linkedin.com/in/hariom-pachankar-242a15246" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a href="https://www.linkedin.com/in/hariom-pachankar-242a15246" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="https://www.instagram.com/_harry_mh_16?igsh=NWQ2azl0bTdiaGs4" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="https://tryhackme.com/p/the.harry1603" target="_blank" rel="noopener noreferrer">TryHackMe</a>
       <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">Discord</a>
